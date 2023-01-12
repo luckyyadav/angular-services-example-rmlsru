@@ -1,3 +1,4 @@
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { MyServices2 } from '../services/myService2';
 
@@ -5,12 +6,18 @@ import { MyServices2 } from '../services/myService2';
   selector: 'my-child',
   templateUrl: './child.component.html',
 })
-export class ChildComponent {
+export class ChildComponent implements OnInit {
   name = 'Angular';
   myTextVal;
   constructor(private msecondSer: MyServices2) {}
 
-  sendTextValue() {
+  /* sendTextValue() {
     this.msecondSer.passValueSubject(this.myTextVal);
+  } */
+
+  ngOnInit() {
+    this.msecondSer.stringSubject.subscribe((res) => {
+     this.myTextVal=res;
+    });
   }
 }

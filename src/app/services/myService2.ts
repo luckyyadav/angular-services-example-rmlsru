@@ -8,6 +8,7 @@ export class MyServices2 {
 
   passValueSubject(data) {
     //passing the data as the next observable
-    this.stringSubject.next('mbnbbb');
+    this.stringSubject.next(data);
+    return this.stringSubject;
   }
 }

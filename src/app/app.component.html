@@ -1,6 +1,13 @@
+<h1>App Component 1</h1>
 
-<p>Start editing to see some magic happen :)</p>
-<h2>{{ serviceText }}</h2>
+<h2>component 1 ---- service 1 - {{ serviceText }}</h2>
+Enter a name:
+<input type="text" [(ngModel)]="fromFirstComponentVal" />
+<button (click)="sendTextValue()">Click Me</button>
+<br />
+<br />
 
+<hr />
+<hr />
 
 <my-child></my-child>

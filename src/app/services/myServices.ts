@@ -13,8 +13,8 @@ export class MyServices {
 
     return title;
   }
-  emitData() {
+  emitData(data) {
     console.log('testtttttttttttttttt service1');
-    return this.ms2.passValueSubject('from service1 passed');
+    this.ms2.passValueSubject(data);
   }
 }

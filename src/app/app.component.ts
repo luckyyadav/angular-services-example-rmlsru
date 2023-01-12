@@ -9,10 +9,15 @@ import { MyServices } from './services/myServices';
 })
 export class AppComponent implements OnInit {
   name = 'Angular';
+  fromFirstComponentVal;
   serviceText;
   constructor(private myServices: MyServices) {
     this.serviceText = this.myServices.sayHello();
   }
 
   ngOnInit() {}
+
+  sendTextValue() {
+    this.myServices.emitData(this.fromFirstComponentVal);
+  }
 }
