@@ -12,6 +12,6 @@ import { MyServices2 } from './services/myService2';
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, ChildComponent],
   bootstrap: [AppComponent],
-  providers: [MyServices, MyServices2],
+  providers: [MyServices,MyServices2],
 })
 export class AppModule {}

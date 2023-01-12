@@ -4,7 +4,9 @@ import { Subject, Observable } from 'rxjs';
 @Injectable()
 export class MyServices2 {
   public stringSubject = new Subject();
-  constructor() {}
+  constructor() {
+    console.log('service2');
+  }
 
   passValueSubject(data) {
     //passing the data as the next observable

@@ -3,7 +3,9 @@ import { MyServices2 } from './myService2';
 
 @Injectable()
 export class MyServices {
-  constructor(private ms2: MyServices2) {}
+  constructor(private ms2: MyServices2) {
+    console.log('service1');
+  }
 
   sayHello() {
     //this.emitData();
